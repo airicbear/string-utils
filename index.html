@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Utils</title>
+</head>
+<body>
+    <h1>String Utils</h1>
+    <h2>String length</h2>
+    <input type="text" name="string-length" id="string-length" oninput="showStringLength()">
+    <p>String length: <span id="string-length-label">0</span></p>
+
+    <h2>Random string</h2>
+    <input type="number" name="random-string" id="random-string" oninput="showRandomString()">
+    <p>Random string: <span id="random-string-label">null</span></p>
+
+    <script src="string-utils.js"></script>
+    <script>
+        function showStringLength() {
+            const input = document.getElementById("string-length");
+            const label = document.getElementById("string-length-label");
+            label.innerHTML = stringLength(input.value);
+        }
+
+        function showRandomString() {
+            const input = document.getElementById("random-string");
+            const label = document.getElementById("random-string-label");
+            label.innerHTML = randomString(parseInt(input.value));
+        }
+    </script>
+</body>
+</html>
